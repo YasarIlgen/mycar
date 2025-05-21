@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor Arabalar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1d3557;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #457b9d;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        nav a:hover {
+            background-color: #1d3557;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .car-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .car-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-item h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .car-item p {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .car-item .btn {
+            margin: 10px;
+            background-color: #1d3557;
+            color: white;
+        }
+
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Spor Arabalar</h1>
+    <p>Hayalinizdeki spor arabayı bulun!</p>
+</header>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="spor.html" class="nav-link">Spor Arabalar</a>
+        <a href="klasik.html" class="nav-link">Klasik Arabalar</a>
+        <a href="kayıt.html" class="nav-link">İletişim ve kayıt</a>
+    </div>
+</nav>
+
+<div class="search-bar text-center">
+    <input type="text" class="form-control" placeholder="Araba arayın (Örn: Ferrari, Lamborghini)">
+</div>
+
+<main class="container">
+    <h2 class="text-center my-4">Mevcut Spor Arabalar</h2>
+    <div class="car-list">
+        <div class="car-item">
+            <img src="ferrarif8.jpg" alt="Ferrari F8">
+            <h3>FERRARİ ÇEŞİTLERİ</h3>
+            <p>2024 Model, yüksek performans.</p>
+            <a href="ferrari.html" class="btn btn-primary">Detaylar</a>
+        </div>
+        <div class="car-item">
+            <img src="lamborgini.jpg" alt="Lamborghini Aventador">
+            <h3>LAMBORGHİNİ ÇEŞİTLERİ</h3>
+            <p>Hız tutkunlarına özel tasarım.</p>
+            <a href="lamborgini.html" class="btn btn-primary">Detaylar</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Araba Satış Platformu. Tüm hakları saklıdır.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

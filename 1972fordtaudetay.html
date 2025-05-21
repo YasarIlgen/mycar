@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford Taunus detayları</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .car-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .big-image {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .big-image:hover {
+            transform: scale(1.03);
+        }
+
+        .small-images img {
+            width: 150px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .small-images img:hover {
+            border: 2px solid #007bff;
+        }
+
+        .price-box {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .seller-info {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-3">
+    <h1>Araba Detayları</h1>
+</header>
+
+<div class="container mt-4">
+    <div class="row car-container">
+        <!-- Resimler -->
+        <div class="col-md-6">
+            <img id="car-image" src="Fordtaauunus.jpg" class="big-image shadow" alt="Araba Resmi">
+            <div class="small-images mt-3 d-flex justify-content-between">
+                <img src="Fordtaauunus.jpg" class="img-thumbnail" onclick="changeImage('Fordtaauunus.jpg')">
+                <img src="fordtau1.jpg" class="img-thumbnail" onclick="changeImage('fordtau1.jpg')">
+                <img src="fordtau2.jpg" class="img-thumbnail" onclick="changeImage('fordtau2.jpg')">
+            </div>
+        </div>
+
+        <!-- Detaylar -->
+        <div class="col-md-6">
+            <h2 id="car-name" class="fw-bold">1972 Ford Taunus</h2>
+            <p class="text-muted"><strong>İlan No:</strong> 361968461</p>
+
+            <div class="price-box mb-3">2.200.000 TL</div>
+            
+            <ul class="list-group mt-3">
+                <li class="list-group-item"><strong>Model Yılı:</strong> <span id="car-year">1972</span></li>
+                <li class="list-group-item"><strong>Yakıt Türü:</strong> <span id="car-fuel">Dizel</span></li>
+                <li class="list-group-item"><strong>Vites:</strong> <span id="car-gear">Manuel</span></li>
+                <li class="list-group-item"><strong>Kilometre:</strong> <span id="car-km">600.000 km</span></li>
+                <li class="list-group-item"><strong>Kasa Tipi:</strong> <span id="car-type">Sedan</span></li>
+                <li class="list-group-item"><strong>Motor Gücü:</strong> <span id="car-power">400 HP</span></li>
+                <li class="list-group-item"><strong>Çekiş:</strong> <span id="car-drive">Önden Çekiş</span></li>
+            </ul>
+
+            <p class="mt-3"><strong>Açıklama:</strong> <span id="car-desc">Sıfır gibi, hatasız, tüm bakımları Ferrari yetkili serviste yapılmıştır. Ekspertiz raporu mevcuttur.</span></p>
+
+            <button id="contact-seller" class="btn btn-primary mt-3">Satıcıyla İletişime Geç</button>
+        </div>
+    </div>
+</div>
+
+<!-- Satıcı Bilgileri -->
+<div class="container mt-4">
+    <div class="seller-info">
+        <h3>Satıcı Bilgileri</h3>
+        <p><strong>Kimden:</strong> Sahibinden</p>
+        <p><strong>İsim:</strong> Mehmet Karaman</p>
+        <p><strong>Telefon:</strong> 0536 286 24 64</p>
+        <p><strong>Konum:</strong> Kütahya</p>
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>&copy; 2024 Araba Pazarı. Tüm hakları saklıdır.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Küçük resimlere tıklanınca büyük resmi değiştir
+    function changeImage(imageSrc) {
+        document.getElementById("car-image").src = imageSrc;
+    }
+
+    // "Satıcıyla İletişime Geç" butonu için uyarı mesajı
+    document.getElementById("contact-seller").addEventListener("click", function() {
+        alert("Satıcıyla iletişime geçmek için 0536 286 24 64 numarasını arayabilirsiniz.");
+    });
+</script>
+
+</body>
+</html>
